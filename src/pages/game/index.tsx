@@ -57,7 +57,7 @@ function Game() {
     if (subscriptionStatus === "S1000" || errorCode === "E3001") {
       timer = setTimeout(() => {
         window.location.href =
-          "https://quiz.lifeinsrilanka.com/qsm_quiz/bengal-brain-1/";
+          "https://lankangamingpro.com/millionaire/app/game/millionaireBD/Millionaire%201.3/HTML5/";
       }, 10000);
     } else {
       navigate("/", { replace: true });
@@ -73,7 +73,7 @@ function Game() {
         <p className="text-sm italic">You will be redirected to the Quiz</p>
         <a
           className="text-sm italic underline"
-          href="https://quiz.lifeinsrilanka.com/qsm_quiz/bengal-brain-1/"
+          href="https://lankangamingpro.com/millionaire/app/game/millionaireBD/Millionaire%201.3/HTML5/"
         >
           Redirect Now
         </a>
