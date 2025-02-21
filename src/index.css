@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --swiper-theme-color: #fff;
+    --swiper-pagination-bullet-inactive-color: #fff;
+  }
+
+  html {
+    background-color: #391173;
+  }
+
+  body {
+    @apply font-primary;
+  }
+
+  progress {
+    @apply col-span-full h-4 w-3/4 appearance-none rounded-full bg-slate-300;
+  }
+
+  ::-webkit-progress-bar {
+    @apply rounded-full bg-[#2a663b];
+  }
+
+  ::-webkit-progress-value {
+    @apply rounded-full bg-[#31d94b];
+  }
+
+  ::-moz-progress-bar {
+    @apply rounded-full bg-red-500;
+  }
+}
+
+@layer components {
+  /* .box {
+    @apply absolute left-1/2 top-1/2 w-[calc(100%-16px)] -translate-x-1/2 -translate-y-1/2 rounded-2xl bg-[#391173] p-8 pb-[280px] shadow-md transition-all duration-300 lg:w-[800px];
+  } */
+
+  .box {
+    @apply absolute w-[calc(100%-16px)] overflow-hidden bg-[#391173] p-8 shadow-md transition-all duration-300 lg:w-[800px] xl:left-1/2 xl:top-1/2 xl:-translate-x-1/2 xl:-translate-y-1/2 xl:rounded-2xl;
+  }
+
+  .q-options {
+    @apply flex w-full items-center justify-between gap-4 rounded-md border-2 border-[#76C98D] bg-[#47955D] px-6 py-3 text-left text-white transition-colors duration-300 hover:bg-[#76C98D] disabled:cursor-not-allowed;
+  }
+
+  .button {
+    @apply w-full rounded-full border border-[#FF4141] bg-[#FCAE31] px-6 py-3 font-semibold uppercase text-[#220350] shadow-[0px_7px_0px_0px_#FF4141] disabled:cursor-not-allowed disabled:border-gray-400 disabled:bg-gray-400;
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 34px;
+}
+
+.swiper-slide {
+  background: #391173;
+  border-radius: 12px;
+  padding: 6px 8px;
+}
+
+/* .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+
+.box-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  background-image: url("./imgs/overlay_bg.png");
+  mix-blend-mode: color-burn;
+  background-position: center;
+}
