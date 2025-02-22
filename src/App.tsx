@@ -3,7 +3,7 @@ import Layout from "./layout";
 import Home from "./pages/home";
 import Game from "./pages/game";
 import Error from "./pages/error";
-import Unsubscribe from "./pages/unsubscribe";
+//import Unsubscribe from "./pages/unsubscribe";
 
 const router = createBrowserRouter([
   {
