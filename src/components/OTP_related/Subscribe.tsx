@@ -279,14 +279,13 @@ function Subscribe() {
   return (
     <>
       {currentComponent === "SUBSCRIBE" && (
-        <div className="box flex w-full flex-col gap-10 pb-[280px] sm:w-[400px]">
-          <div className="box-overlay">
-          </div>
+        <div className="box flex w-full flex-col gap-10 pb-[40dvh] sm:w-[400px]">
+          <div className="box-overlay"></div>
           <div className="mx-auto">
             <img
-              className="w-[162px]"
-              src="imgs/flash-win.png"
-              alt="iphone14"
+              className="size-[200px]"
+              src="imgs/millionaire-logo.png"
+              alt="millionaire logo"
             />
           </div>
           {/* <p className="text-center text-xl">
@@ -295,11 +294,8 @@ function Subscribe() {
         </p> */}
           {/* heading */}
           <div className="space-y-1">
-            <p className="text-center text-2xl font-semibold uppercase">
-              Answer 10 question correctly
-            </p>
-            <p className="text-center text-5xl font-semibold uppercase">
-              & WIN !
+            <p className="text-center text-3xl text-[2rem] font-semibold uppercase">
+              {"কোটি টাকার প্রশ্ন খেলা এবং উত্তর দাও, টাকা নাও"}
             </p>
           </div>
 
@@ -309,7 +305,8 @@ function Subscribe() {
             onFinish={onMobileFormFinish}
           >
             <p className="text-center font-semibold uppercase text-white">
-              Enter your phone no
+              {"আপনার মোবাইল নম্বর লিখুন।"}
+              {/* Enter your phone no */}
             </p>
             <FormItem
               style={{
@@ -344,15 +341,20 @@ function Subscribe() {
           <div className="box-overlay"></div>
           <div className="mx-auto mb-20">
             <img
-              className="w-[162px]"
-              src="imgs/flash-win.png"
-              alt="iphone14"
+              className="size-[200px]"
+              src="imgs/millionaire-logo.png"
+              alt="millionaire logo"
             />
           </div>
           <div className="flex flex-col items-center gap-6">
-            <p className="font-medium">OTP Verification</p>
+            <p className="text-2xl font-bold">
+              {
+                "অনুগ্রহ করে আপনার মোবাইল নম্বরে পাঠানো ওটিপি কোডটি প্রবেশ করুন।"
+              }
+              {/* OTP Verification */}
+            </p>
             <InputOTP
-              inputClassName="rounded-xl"
+              inputClassName="rounded-xl max-w-[none]"
               value={otp}
               onChange={(values) => {
                 setOtp(values);
@@ -363,14 +365,20 @@ function Subscribe() {
             />
             {/* Submit */}
             <button
-              className="button w-1/2"
+              className="button w-3/4"
               disabled={!isValidOTP}
               onClick={onSubmitOTP}
             >
               Submit
             </button>
-            <p className="cursor-pointer font-light" onClick={hideOTP}>
-              Resend OTP
+            <p className="font-light">
+              {"এখনও ওটিপি নম্বর পাননি?"}{" "}
+              <span
+                className="cursor-pointer font-semibold underline"
+                onClick={hideOTP}
+              >
+                Resend OTP
+              </span>
             </p>
           </div>
         </div>

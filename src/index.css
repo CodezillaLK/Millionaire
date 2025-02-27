@@ -47,7 +47,7 @@
   }
 
   .button {
-    @apply w-full rounded-full border border-[#FF4141] bg-[#FCAE31] px-6 py-3 font-semibold uppercase text-[#220350] shadow-[0px_7px_0px_0px_#FF4141] disabled:cursor-not-allowed disabled:border-gray-400 disabled:bg-gray-400;
+    @apply w-full rounded-full border border-[#FF4141] bg-[#FCAE31] px-6 py-3 font-semibold uppercase text-[#220350] shadow-[0px_7px_0px_0px_#FF4141] disabled:cursor-not-allowed disabled:border-gray-400 disabled:opacity-40;
   }
 }
 
