@@ -6,21 +6,21 @@ import "swiper/css/pagination";
 
 const winners = [
   {
-    img: "/winners/user1_img.png",
-    name: "Sithara T",
-    location: "Pannipitiya",
+    img: "/winners/user.png",
+    name: "Mita Rahman",
+    location: "Dhaka",
     amount: "5000",
   },
   {
-    img: "/winners/user1_img.png",
-    name: "Sithara B",
-    location: "Jaffna",
+    img: "/winners/user.png",
+    name: "Shahnaz Akter",
+    location: "Chittagong",
     amount: "1000",
   },
   {
-    img: "",
-    name: "Sithara C",
-    location: "Colombo",
+    img: "/winners/user.png",
+    name: "Rina Sultana",
+    location: "Dhaka",
     amount: "2500",
   },
 ];
