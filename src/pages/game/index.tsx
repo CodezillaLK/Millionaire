@@ -57,7 +57,7 @@ function Game() {
     if (subscriptionStatus === "S1000" || errorCode === "E3001") {
       timer = setTimeout(() => {
         window.location.href =
-          "https://lankangamingpro.com/millionaire/app/game/millionaireBD/Millionaire%201.3/HTML5/";
+          "https://lankangamingpro.com/millionaire/app/game/millionaireBD/Millionaire%201.3/HTML5/game.php";
       }, 10000);
     } else {
       navigate("/", { replace: true });
