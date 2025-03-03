@@ -65,9 +65,9 @@ function QuizFooter() {
         </Swiper>
       </div>
       <div className="flex flex-col gap-2 text-center text-xs">
-        <div className="flex flex-wrap justify-center">
-          <p className="whitespace-nowrap">Robi - Daily 2 Tk + Tax | </p>
-          <p className="whitespace-nowrap">GP - Daily 3 Tk + Tax | </p>
+        <div className="flex flex-wrap justify-center gap-x-1">
+          <p className="whitespace-nowrap">Robi - Daily 2 Tk + Tax |</p>
+          <p className="whitespace-nowrap">GP - Daily 3 Tk + Tax |</p>
           <p className="whitespace-nowrap">Banglalink - Daily 5 Tk + Tax</p>
         </div>
         <p>
