@@ -64,12 +64,16 @@ function QuizFooter() {
           ))}
         </Swiper>
       </div>
-      <div className="flex flex-col gap-1 text-center text-xs">
+      <div className="flex flex-col gap-2 text-center text-xs">
+        <div className="flex flex-wrap justify-center">
+          <p className="whitespace-nowrap">Robi - Daily 2 Tk + Tax | </p>
+          <p className="whitespace-nowrap">GP - Daily 3 Tk + Tax | </p>
+          <p className="whitespace-nowrap">Banglalink - Daily 5 Tk + Tax</p>
+        </div>
         <p>
-          Daily 3 Taka + Tax{" | "}
           <a
             className="underline"
-            href="https://lankangamingpro.com/terms/Quiz.html"
+            href="https://lankangamingpro.com/FAQ/TnC.html"
             target="_blank"
           >
             Terms and Conditions
@@ -77,7 +81,7 @@ function QuizFooter() {
           {" | "}
           <a
             className="underline"
-            href="https://lankangamingpro.com/FAQ/sheet.html"
+            href="https://lankangamingpro.com/FAQ/FAQ.html"
             target="_blank"
           >
             FAQs
