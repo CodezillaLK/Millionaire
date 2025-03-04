@@ -3,7 +3,7 @@ export const GTAG_ID = "AW-10848315230";
 export const GTM_ID = "GTM-NH9FXWP";
 
 // export const GKQUIZ_BD_BACKEND_URL = "http://localhost:5000";
-export const GKQUIZ_BD_BACKEND_URL = "https://millionairebe.gamingzonelk.com";
+export const GKQUIZ_BD_BACKEND_URL = "https://millionairefe2.gamingzonelk.com";
 
 export const TELECOM_TYPES = {
   ROBI: "ROBI",
