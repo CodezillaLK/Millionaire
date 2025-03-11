@@ -2,7 +2,11 @@ import { Form, Input, message, Modal } from "antd";
 import FormItem from "antd/es/form/FormItem";
 import { useState } from "react";
 import { FaTimes } from "react-icons/fa";
-import { gpUnsubUser } from "../../services/bdService";
+import {
+  gpUnsubUser,
+  unsubscribeAppLink,
+  unsubscribeRobi,
+} from "../../services/bdService";
 import { useQuiz } from "../../contexts/quizContext";
 
 function Unsubscribe() {
@@ -17,6 +21,10 @@ function Unsubscribe() {
   const mobileNumberType = (mobile) => {
     if (mobile.startsWith("013") || mobile.startsWith("017")) {
       return "GP";
+    } else if (mobile.startsWith("016") || mobile.startsWith("018")) {
+      return "ROBI";
+    } else if (mobile.startsWith("014") || mobile.startsWith("019")) {
+      return "BANGLALINK";
     } else {
       return "";
     }
@@ -50,6 +58,60 @@ function Unsubscribe() {
       });
   };
 
+  const onRUBIUnsubscribe = async (mobile) => {
+    showLoader();
+    unsubscribeRobi({ mobile })
+      .then((res) => {
+        if (res.data.statusCode === "S1000") {
+          message.success("You have unsubscribed successfully!");
+        } else {
+          setErrorModal({
+            isOpen: true,
+            content: res.data.statusDetail,
+          });
+        }
+      })
+      .catch((e) => {
+        // console.log(e);
+        setErrorModal({
+          isOpen: true,
+          content:
+            e.response.data.message || e.response.data.statusDetail || "Error",
+        });
+        throw new Error(e);
+      })
+      .finally(() => {
+        hideLoader();
+      });
+  };
+
+  const onALUnsubscribe = async (mobile) => {
+    showLoader();
+    unsubscribeAppLink({ mobile })
+      .then((res) => {
+        if (res.data.statusCode === "S1000") {
+          message.success("You have unsubscribed successfully!");
+        } else {
+          setErrorModal({
+            isOpen: true,
+            content: res.data.statusDetail,
+          });
+        }
+      })
+      .catch((e) => {
+        // console.log(e);
+        setErrorModal({
+          isOpen: true,
+          content:
+            e.response.data.message || e.response.data.statusDetail || "Error",
+        });
+        throw new Error(e);
+      })
+      .finally(() => {
+        hideLoader();
+      });
+  };
+
   const onFormFinish = (values) => {
     const { mobile } = values;
     const numType = mobileNumberType(values.mobile);
@@ -58,11 +120,17 @@ function Unsubscribe() {
       case "GP":
         onGPUnsubscribe(mobile);
         break;
+      case "ROBI":
+        onRUBIUnsubscribe(mobile);
+        break;
+      case "BANGLALINK":
+        onALUnsubscribe(mobile);
+        break;
       default:
         setErrorModal({
           isOpen: true,
           content:
-            "This service is currently only applicable for Grameenphone customers",
+            "This service is currently only applicable for Grameenphone, Robi and Banglalink customers",
         });
     }
   };

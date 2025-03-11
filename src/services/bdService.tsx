@@ -13,6 +13,13 @@ export const verifyOTP = async (payload) => {
   );
 };
 
+export const unsubscribeRobi = async (payload) => {
+  return await axios.post(
+    `${GKQUIZ_BD_BACKEND_URL}/bd/rubi-unsubscribe`,
+    payload,
+  );
+};
+
 // al
 export const sendAppLinkOTP = async (payload) => {
   return await axios.post(`${GKQUIZ_BD_BACKEND_URL}/bd/al-sendOTP`, payload);
@@ -21,6 +28,10 @@ export const sendAppLinkOTP = async (payload) => {
 export const verifyAppLinkOTP = async (payload) => {
   return await axios.post(`${GKQUIZ_BD_BACKEND_URL}/bd/al-verifyOTP`, payload);
 };
+
+export const unsubscribeAppLink = async (payload) => {
+  return await axios.post(`${GKQUIZ_BD_BACKEND_URL}/bd/al-unsubscribe`, payload)
+}
 
 // gp
 export const getGPpaymentURL = async (payload) => {
