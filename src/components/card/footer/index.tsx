@@ -3,6 +3,7 @@ import { Pagination } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import { Link } from "react-router-dom";
 
 const winners = [
   {
@@ -86,6 +87,10 @@ function QuizFooter() {
           >
             FAQs
           </a>
+          {" | "}
+          <Link className="underline" to="/unsubscribe">
+            Unsubscribe
+          </Link>
         </p>
       </div>
     </div>
