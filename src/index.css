@@ -39,7 +39,7 @@
   } */
 
   .box {
-    @apply absolute w-[calc(100%-16px)] overflow-hidden bg-[#391173] p-8 shadow-md transition-all duration-300 lg:w-[800px] xl:left-1/2 xl:top-1/2 xl:-translate-x-1/2 xl:-translate-y-1/2 xl:rounded-2xl;
+    @apply absolute w-[calc(100%-16px)] overflow-hidden overflow-y-auto bg-[#391173] p-8 shadow-md transition-all duration-300 lg:w-[800px] sm:left-1/2 sm:top-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 sm:rounded-2xl;
   }
 
   .q-options {

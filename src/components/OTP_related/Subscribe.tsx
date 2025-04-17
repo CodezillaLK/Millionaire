@@ -279,7 +279,7 @@ function Subscribe() {
   return (
     <>
       {currentComponent === "SUBSCRIBE" && (
-        <div className="box flex w-full flex-col gap-10 pb-[40dvh] sm:w-[400px]">
+        <div className="box flex w-full flex-col gap-10 pb-[40dvh] xl:pb-[300px] sm:w-[400px]">
           <div className="box-overlay"></div>
           <div className="mx-auto">
             <img
