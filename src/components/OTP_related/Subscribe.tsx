@@ -166,7 +166,7 @@ function Subscribe() {
         setErrorModal({
           isOpen: true,
           content:
-            "This service is currently only applicable for Robi, Banglalink and Grameenphone customers",
+            "অনুগ্রহ করে সঠিক মোবাইল নম্বর প্রবেশ করুন। মোবাইল নাম্বার লিখার সময় “01X XXX XXXXX” ফরম্যাট ব্যাবহার করুন",
         });
     }
   };
