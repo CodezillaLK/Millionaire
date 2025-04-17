@@ -11,7 +11,7 @@ function Home() {
   // const navigate = useNavigate();
 
   return (
-    <div className="xl:flex xl:flex-col xl:items-center">
+    <>
       <Subscribe />
       {/* {status === "active" && (
         <div className="box">
@@ -24,7 +24,7 @@ function Home() {
         </div>
       )}
       {status === "finished" && <Subscribe />} */}
-    </div>
+    </>
   );
 }
 export default Home;
