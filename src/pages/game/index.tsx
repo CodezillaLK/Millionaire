@@ -57,7 +57,7 @@ function Game() {
     if (subscriptionStatus === "S1000" || errorCode === "E3001") {
       timer = setTimeout(() => {
         window.location.href =
-          "https://lankangamingpro.com/millionaire/app/game/millionaireBD/Millionaire%201.3/HTML5/game.php";
+          "https://lankangamingpro.com/millionaire/app/game/millionaireBD/Millionaire%201.3/HTML5/?_gl=1*ekl15m*_gcl_au*MTg0NDIzNzE5Mi4xNzQwMjA5NTk0";
       }, 10000);
     } else {
       navigate("/", { replace: true });
@@ -73,7 +73,7 @@ function Game() {
         <p className="text-sm italic">You will be redirected to the Quiz</p>
         <a
           className="text-sm italic underline"
-          href="https://lankangamingpro.com/millionaire/app/game/millionaireBD/Millionaire%201.3/HTML5/"
+          href="https://lankangamingpro.com/millionaire/app/game/millionaireBD/Millionaire%201.3/HTML5/?_gl=1*ekl15m*_gcl_au*MTg0NDIzNzE5Mi4xNzQwMjA5NTk0"
         >
           Redirect Now
         </a>
